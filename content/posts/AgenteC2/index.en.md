@@ -1,3 +1,23 @@
+---
+weigth: 1
+title: "Método de ejecución Agente C2"
+date: 2025-06-06T11:24:09+02:00
+draft: false
+author: Antu
+publishDate: 2025-06-06
+tags: ["Red Team","C2", "AdaptixC2","Acceso Inicial"]
+categories: ["Red Team"]
+images: []
+resources: 
+- name: "featured-image"
+  src: "preimagen.jpeg"
+
+lightgallery: true
+
+toc:
+  auto: false
+---
+
 # Execution method Agent C2
 
 ## Introduction
@@ -73,7 +93,7 @@ First I add the files to a folder.
 ```bash
 ls -l 
 total 100
--rw-r--r-- 1 root  root  80384 Jun  5 16:22 agent.x64.exe
+-rw-r--r-- 1 n1kto n1kto 80384 Jun  5 16:22 agent.x64.exe
 -rw-rw-r-- 1 n1kto n1kto 13264 Jun  5  2025 Documento.pdf
 -rw-rw-r-- 1 n1kto n1kto  1859 Jun  5  2025 Documento.pdf.lnk
 ```
