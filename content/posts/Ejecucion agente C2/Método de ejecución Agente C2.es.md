@@ -4,13 +4,13 @@ title: "Método de ejecución Agente C2"
 date: 2025-06-06T11:24:09+02:00
 draft: false
 author: Antu
-publishDate: 2025-06-006
+publishDate: 2025-06-06
 tags: ["Red Team","C2", "AdaptixC2","Acceso Inicial"]
 categories: ["Red Team"]
 images: []
 resources: 
 - name: "featured-image"
-  src: "preview.png"
+  src: "preimagen.jpeg"
 
 lightgallery: true
 
