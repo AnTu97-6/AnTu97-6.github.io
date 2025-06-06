@@ -20,21 +20,21 @@ Para este Post voy a utilizar un listener de tipo HTTP, para ello debemos hacer 
 
 Una vez abierta la pestaña de los listeners hacemos clic derecho > Create y nos aparecerá la siguiente ventana:
 
-![image.png](imagenes/image%201.png)
+![image.png](image%201.png)
 
 Desde aquí podemos configurar nuestro listener, para esta prueba solo he realizado cambios en la pestaña Main settings, pero también se pueden configurar las cabeceras HTTP, una pagina de error y la pagina del Payload.
 
 Indicamos un nombre y añadimos la ip de la maquina donde se ejecuta el servidor y un puerto, al final debería quedar algo así:
 
-![image.png](imagenes/image%202.png)
+![image.png](image%202.png)
 
 Para finalizar este paso solo nos queda generar el agente, para ello hacemos clic derecho en el listener recién creado.
 
-![image.png](imagenes/image%203.png)
+![image.png](image%203.png)
 
 Nos aparecerá la siguiente ventana:
 
-![image.png](imagenes/image%204.png)
+![image.png](image%204.png)
 
 Para esta prueba no he realizado cambios, pero como se puede observar podemos modificar la arquitectura, el tipo de formato, el campo Sleep, cuando queremos que termine la conexión remota y el tiempo activo del agente.
 
@@ -60,7 +60,7 @@ $lnk.Save()
 
 Si el icono de pdf no se muestra se puede cambiar haciendo clic en propiedades y cambiar icono.
 
-![image.png](imagenes/image%205.png)
+![image.png](image%205.png)
 
 ## Container
 
@@ -68,9 +68,9 @@ Una vez tenemos los tres ficheros: Documento.pdf(señuelo), Agent.64.exe(payload
 
 Mark of the web(MotW) es un identificador de zona que se utiliza para marcar los archivos descargados de Internet como potencialmente inseguros.  Esto se puede ver en un archivo consultando sus propiedades en el Explorador o utilizando PowerShell.
 
-![image.png](imagenes/image%206.png)
+![image.png](image%206.png)
 
-![image.png](imagenes/image%207.png)
+![image.png](image%207.png)
 
 Algunos  formatos de comprimidos admiten archivos ocultos, y otros no propagan MotW.  [Este repositorio](https://github.com/nmantani/archiver-MOTW-support-comparison) de [Nobutaka Mantani](https://x.com/nmantani) contiene una comparación de las propagaciones de MotW.
 
@@ -78,7 +78,7 @@ Para empaquetar nuestros ficheros voy a utilizar la herramienta [PackMyPayload](
 
 Añado los ficheros a una carpeta.
 
-![image.png](imagenes/image%208.png)
+![image.png](image%208.png)
 
 Y los empaqueto en un fichero con formato IMG ocultando agent.64.exe y Documento.pdf utilizando el parámetro `-H` .
 
@@ -102,11 +102,11 @@ y en la maquina objetivo desde PowerShell lo descargamos:
 
 Abrimos package.img y abrimos el fichero que contiene produciendo así la conexión del agente con nuestro Command and control y todo ello con Windows Defender activado.
 
-![image.png](imagenes/image%209.png)
+![image.png](image%209.png)
 
-![image.png](imagenes/image%2010.png)
+![image.png](image%2010.png)
 
-![image.png](imagenes/image%2011.png)
+![image.png](image%2011.png)
 
 Recuerdo que este post es con fines educativos y éticos y no se debe emplear para fines ilegales.
 
