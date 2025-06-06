@@ -1,78 +1,35 @@
-name: Deploy Hugo site to Pages
+name: Deploy Hugo to GitHub Pages (legacy but stable)
 
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
+    branches: [master]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-defaults:
-  run:
-    shell: bash
+  contents: write  # Para poder hacer push a gh-pages
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.113.0
+
     steps:
-      - name: Instalar Hugo CLI
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Instalar Hugo
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i hugo.deb
 
       - name: Instalar Dart Sass
         run: sudo snap install dart-sass
 
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Construir sitio
+        run: hugo --minify
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          submodules: recursive
-          fetch-depth: 0
-
-      - name: Configurar Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
-      - name: Instalar dependencias de Node.js
-        run: |
-          [[ -f package.json && (-f package-lock.json || -f npm-shrinkwrap.json) ]] && npm ci || true
-
-      - name: Construir con Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      - name: Subir artefacto (temporal usando v4)
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: ./public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Descargar artefacto
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: .
-
-      - name: Desplegar en GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
