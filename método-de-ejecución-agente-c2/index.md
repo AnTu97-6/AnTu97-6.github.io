@@ -16,7 +16,7 @@ Una vez hemos ejecutado el servidor y el cliente, nos aparecerá la interfaz del
 
 Para este Post voy a utilizar un listener de tipo HTTP, para ello debemos hacer clic en la esquina superior izquierda en el icono de los cascos.
 
-![Untitled](image.png)
+![Untitled](imagenes/image.png)
 
 Una vez abierta la pestaña de los listeners hacemos clic derecho > Create y nos aparecerá la siguiente ventana:
 
