@@ -1,4 +1,5 @@
-# 
+# Método de ejecución Agente C2
+
 
 # Execution method Agent C2
 
@@ -75,7 +76,7 @@ First I add the files to a folder.
 ```bash
 ls -l 
 total 100
--rw-r--r-- 1 root  root  80384 Jun  5 16:22 agent.x64.exe
+-rw-r--r-- 1 n1kto n1kto 80384 Jun  5 16:22 agent.x64.exe
 -rw-rw-r-- 1 n1kto n1kto 13264 Jun  5  2025 Documento.pdf
 -rw-rw-r-- 1 n1kto n1kto  1859 Jun  5  2025 Documento.pdf.lnk
 ```
@@ -109,3 +110,4 @@ We open package.img and open the file it contains, thus producing the connection
 ![image.png](image%2010.png)
 
 I remind you that this post is for educational and ethical purposes and should not be used for illegal purposes.
+
