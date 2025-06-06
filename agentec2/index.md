@@ -79,7 +79,13 @@ Para empaquetar nuestros ficheros voy a utilizar la herramienta [PackMyPayload](
 
 Añado los ficheros a una carpeta.
 
-![image.png](image%208.png)
+```bash
+ls -l 
+total 100
+-rw-r--r-- 1 root  root  80384 Jun  5 16:22 agent.x64.exe
+-rw-rw-r-- 1 n1kto n1kto 13264 Jun  5  2025 Documento.pdf
+-rw-rw-r-- 1 n1kto n1kto  1859 Jun  5  2025 Documento.pdf.lnk
+```
 
 Y los empaqueto en un fichero con formato IMG ocultando agent.64.exe y Documento.pdf utilizando el parámetro `-H` .
 
