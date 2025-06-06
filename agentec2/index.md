@@ -110,3 +110,4 @@ Abrimos package.img y abrimos el fichero que contiene produciendo así la conexi
 ![image.png](image%2011.png)
 
 Recuerdo que este post es con fines educativos y éticos y no se debe emplear para fines ilegales.
+
