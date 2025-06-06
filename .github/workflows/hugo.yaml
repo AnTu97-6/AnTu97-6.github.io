@@ -55,7 +55,7 @@ jobs:
         run: |
           hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Subir el artefacto a Pages
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
 
@@ -69,4 +69,4 @@ jobs:
     steps:
       - name: Desplegar en GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
