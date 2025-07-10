@@ -644,7 +644,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     image = "/images/avatar.png"
     # thumbnail URL
     # 缩略图 URL
-    thumbnailUrl = "/images/screenshot.png"
+    thumbnailUrl = "/images/avatar.png"
 
   # Analytics config
   # 网站分析配置
