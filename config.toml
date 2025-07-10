@@ -641,7 +641,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.seo]
     # image URL
     # 图片 URL
-    image = "/images/Apple-Devices-Preview.png"
+    image = "/images/avatar.png"
     # thumbnail URL
     # 缩略图 URL
     thumbnailUrl = "/images/screenshot.png"
