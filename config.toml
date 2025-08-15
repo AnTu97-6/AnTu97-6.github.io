@@ -2,7 +2,7 @@ baseURL = "https://AnTu97-6.github.io"
 
 # theme
 # 主题
-theme = "AnTu97-6"
+theme = "LoveIt"
 # themes directory
 # 主题目录
 themesDir = "../.."
