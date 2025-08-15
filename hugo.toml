@@ -5,7 +5,7 @@ baseURL = "https://AnTu97-6.github.io"
 theme = "LoveIt"
 # themes directory
 # 主题目录
-
+themesDir = "../.."
 
 # website title
 # 网站标题
