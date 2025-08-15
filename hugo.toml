@@ -912,3 +912,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           typeit = true
           social = true
           disclaimer = ""
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
