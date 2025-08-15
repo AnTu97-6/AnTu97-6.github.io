@@ -1,30 +1,46 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Categoría - AnTu97-6</title>
-        <link>https:/antu97-6.github.io/AnTu97-6x/categories/</link>
+        <link>https://AnTu97-6.github.io/categories/</link>
         <description>Categories - Categoría - AnTu97-6</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</lastBuildDate><atom:link href="https:/antu97-6.github.io/AnTu97-6x/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://AnTu97-6.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Red Team</title>
+    <link>https://AnTu97-6.github.io/categories/red-team/</link>
+    <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>https://AnTu97-6.github.io/categories/red-team/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Vulnerabilidades Web</title>
+    <link>https://AnTu97-6.github.io/categories/vulnerabilidades-web/</link>
+    <pubDate>Fri, 27 Dec 2024 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>https://AnTu97-6.github.io/categories/vulnerabilidades-web/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Proving Grounds</title>
+    <link>https://AnTu97-6.github.io/categories/proving-grounds/</link>
+    <pubDate>Thu, 02 May 2024 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>https://AnTu97-6.github.io/categories/proving-grounds/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>HacktheBox</title>
-    <link>https:/antu97-6.github.io/AnTu97-6x/categories/hackthebox/</link>
+    <link>https://AnTu97-6.github.io/categories/hackthebox/</link>
     <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
-    <author>Antonio</author>
-    <guid>https:/antu97-6.github.io/AnTu97-6x/categories/hackthebox/</guid>
+    <author>xxxx</author>
+    <guid>https://AnTu97-6.github.io/categories/hackthebox/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Vulnhub</title>
-    <link>https:/antu97-6.github.io/AnTu97-6x/categories/vulnhub/</link>
+    <link>https://AnTu97-6.github.io/categories/vulnhub/</link>
     <pubDate>Sat, 23 Sep 2023 11:24:09 &#43;0200</pubDate>
-    <author>Antonio</author>
-    <guid>https:/antu97-6.github.io/AnTu97-6x/categories/vulnhub/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>文档</title>
-    <link>https:/antu97-6.github.io/AnTu97-6x/categories/documentation/_index.zh-cn/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>Antonio</author>
-    <guid>https:/antu97-6.github.io/AnTu97-6x/categories/documentation/_index.zh-cn/</guid>
+    <author>xxxx</author>
+    <guid>https://AnTu97-6.github.io/categories/vulnhub/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
