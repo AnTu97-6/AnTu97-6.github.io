@@ -1,0 +1,87 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - AnTu97-6</title>
+        <link>http://localhost:1313/en/tags/</link>
+        <description>Tags - Tag - AnTu97-6</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Acceso Inicial</title>
+    <link>http://localhost:1313/en/tags/acceso-inicial/</link>
+    <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/acceso-inicial/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>AdaptixC2</title>
+    <link>http://localhost:1313/en/tags/adaptixc2/</link>
+    <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/adaptixc2/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>C2</title>
+    <link>http://localhost:1313/en/tags/c2/</link>
+    <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/c2/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Red Team</title>
+    <link>http://localhost:1313/en/tags/red-team/</link>
+    <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/red-team/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Active Directory</title>
+    <link>http://localhost:1313/en/tags/active-directory/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/active-directory/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>AD</title>
+    <link>http://localhost:1313/en/tags/ad/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/ad/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Easy</title>
+    <link>http://localhost:1313/en/tags/easy/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/easy/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>HackTheBox</title>
+    <link>http://localhost:1313/en/tags/hackthebox/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/hackthebox/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>OSCP</title>
+    <link>http://localhost:1313/en/tags/oscp/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/oscp/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>TjNull</title>
+    <link>http://localhost:1313/en/tags/tjnull/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/en/tags/tjnull/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

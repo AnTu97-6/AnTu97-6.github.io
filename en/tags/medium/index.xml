@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Medium - Tag - AnTu97-6</title>
+        <link>http://localhost:1313/en/tags/medium/</link>
+        <description>Medium - Tag - AnTu97-6</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 Sep 2023 11:24:09 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/en/tags/medium/" rel="self" type="application/rss+xml" /><item>
+    <title>DC-9 Walkthrough</title>
+    <link>http://localhost:1313/en/dc-9/</link>
+    <pubDate>Sat, 23 Sep 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/en/dc-9/</guid>
+    <description><![CDATA[#DC-9
+Machine page: https://www.vulnhub.com/entry/dc-9,412/
+Download link: https://download.vulnhub.com/dc/DC-9.zip
+Dc-9 is one of the machines from vulnhub that contains the list of Tjnull, which is a list created to prepare for the OSCP exam, this machine is the first on the list with a similar level to the machines in the course that the OSCP offers.
+Network Scan The first step is to find the IP of our target, for this we use Arp-Scan, this tool allows us to scan a LAN network and discover devices connected to it.]]></description>
+</item>
+</channel>
+</rss>

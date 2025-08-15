@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>HacktheBox - Categoría - AnTu97-6</title>
+        <link>http://localhost:1313/categories/hackthebox/</link>
+        <description>HacktheBox - Categoría - AnTu97-6</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/categories/hackthebox/" rel="self" type="application/rss+xml" /><item>
+    <title>Sauna Walkthrough</title>
+    <link>http://localhost:1313/sauna/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/sauna/</guid>
+    <description><![CDATA[Sauna Escaneo y Enumeración Una vez conectado con la VPN y encendido la maquina en hackthebox inicio la fase de escaneo y enumeración lanzando la herramienta nmap realizando un escaneo de puertos para obtener servicios y versiones de los puertos abiertos.
+Iniciamos la maquina lanzando un escaneo de puertos con nmap.
+nmap -T4 -p- -A 10.10.10.175 Output:
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-05 13:43 EST Stats: 0:00:01 elapsed; 0 hosts completed (0 up), 1 undergoing Ping Scan Parallel DNS resolution of 1 host.]]></description>
+</item>
+</channel>
+</rss>

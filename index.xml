@@ -1,0 +1,101 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>AnTu97-6</title>
+        <link>http://localhost:1313/</link>
+        <description>Blog de AnTu97-6</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Método de ejecución Agente C2</title>
+    <link>http://localhost:1313/agentec2/</link>
+    <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/agentec2/</guid>
+    <description><![CDATA[Método de ejecución Agente C2 Introducción En este post voy a describir una manera de como un atacante o miembros de un Red Team pueden elaborar un fichero malicioso y ser ejecutado en la maquina objetivo con el fin de obtener acceso sin ser detectado por el antivirus.
+Para este post he utilizado el Command and Control AdaptixC2, no voy a entrar en profundidad en como se instala ya que en la propia documentación viene bien detallado el proceso.]]></description>
+</item>
+<item>
+    <title>Cross Site Request Forgery (CSRF)</title>
+    <link>http://localhost:1313/csrf/</link>
+    <pubDate>Fri, 27 Dec 2024 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/csrf/</guid>
+    <description><![CDATA[Introducción En este articulo se va a explicar a modo resumen en que consiste la vulnerabilidad web Cross Site Request Forguery (CSRF) y algunas técnicas de como explotarla en diferentes entornos.
+Para la redacción de este articulo me he basado en los laboratorios de portswigger que he realizado para la preparación de su certificación BSCP.
+Definición Esta vulnerabilidad consiste en llevar a cabo acciones por parte de un usuario sin su consentimiento ni conocimiento como puede ser un cambio de correo dentro de una web a través de un link malicioso generado por el atacante, aprovechándose de una mala configuración de la web vulnerable, que enviara al usuario.]]></description>
+</item>
+<item>
+    <title>Crane</title>
+    <link>http://localhost:1313/crane/</link>
+    <pubDate>Thu, 02 May 2024 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/crane/</guid>
+    <description><![CDATA[Descripción Dificultad: intermedia (valorada como easy)
+En esta maquina de Proving Grounds Practice, veremos la explotación del software SuiteCRM a través de un exploit publico y una escalada de privilegios aprovechándonos de permisos sobre un binario que es posible ejecutar con sudo.
+Escaneo y Análisis de Vulnerabilidades Iniciamos realizando un escaneo con nmap sobre la maquina crane
+nmap -p- --open -T4 -Pn -n -vvv -sS 192.168.250.146 -oG allPorts Exportamos los resultados en formato grepeable para poder copiar y pegar los puertos obtenidos en un nuevo escaneo a través de la función extracPorts.]]></description>
+</item>
+<item>
+    <title>Sauna Walkthrough</title>
+    <link>http://localhost:1313/sauna/</link>
+    <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/sauna/</guid>
+    <description><![CDATA[Sauna Escaneo y Enumeración Una vez conectado con la VPN y encendido la maquina en hackthebox inicio la fase de escaneo y enumeración lanzando la herramienta nmap realizando un escaneo de puertos para obtener servicios y versiones de los puertos abiertos.
+Iniciamos la maquina lanzando un escaneo de puertos con nmap.
+nmap -T4 -p- -A 10.10.10.175 Output:
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-05 13:43 EST Stats: 0:00:01 elapsed; 0 hosts completed (0 up), 1 undergoing Ping Scan Parallel DNS resolution of 1 host.]]></description>
+</item>
+<item>
+    <title>DC-9 Walkthrough</title>
+    <link>http://localhost:1313/dc-9/</link>
+    <pubDate>Sat, 23 Sep 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/dc-9/</guid>
+    <description><![CDATA[DC-9 Pagina de la maquina: https://www.vulnhub.com/entry/dc-9,412/
+Enlace de descarga: https://download.vulnhub.com/dc/DC-9.zip
+Dc-9 es una de las maquinas de vulnhub que contiene el listado de Tjnull, el cual es un listado creado para prepararse el examen del OSCP, esta maquina es la primera de la lista con un nivel similar a las maquinas del curso que el OSCP ofrece.
+Escaneo de la Red El primer paso es encontrar la ip de nuestro objetivo, para ello utilizamos Arp-Scan, esta herramienta permite escanear una red LAN y descubrir dispositivos conectados en ella.]]></description>
+</item>
+<item>
+    <title>Kioptrix Level 5 Walkthrough</title>
+    <link>http://localhost:1313/kioptrix_level_5/</link>
+    <pubDate>Sat, 02 Sep 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/kioptrix_level_5/</guid>
+    <description><![CDATA[Kioptrix level 5 Configuración Para que la maquina asigne una ip hay que eliminar el adaptador de red y volver a añadirlo.
+Resolución Escaneo y nalisis de Vulnerabilidades Comienzo haciendo un escaneo de la red local con arp-scan para descubrir la ip de la maquina objetivo.
+arp-scan -I eth0 --localnet -I -&gt; indicamos la interfaz de red --localnet -&gt; indicamos que genere direcciones desde la configuración de la interfaz. Obtengo que la ip de mi objetivo es la 192.]]></description>
+</item>
+<item>
+    <title>Kioptrix Level 3 Walkthrough</title>
+    <link>http://localhost:1313/kioptrix_level_3/</link>
+    <pubDate>Fri, 25 Aug 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/kioptrix_level_3/</guid>
+    <description><![CDATA[Kioptrix Level 3 Resolución de la Maquina Escaneo y Análisis de Vulnerabilidades Empezamos con un escaneo a nuestra red local con el comando arp para obtener la ip de nuestra maquina objetivo.
+arp-scan -I eth0 --localnet Una vez obtenida la ip procedemos a realizar un escaneo con nmap.
+nmap -sCV 192.168.66.161 Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-25 13:37 EDT Nmap scan report for kioptrix3.com (192.168.66.161) Host is up (0.]]></description>
+</item>
+<item>
+    <title>Kioptrix Level 2 Walkthrough</title>
+    <link>http://localhost:1313/kioptrix_level_2/</link>
+    <pubDate>Tue, 22 Aug 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/kioptrix_level_2/</guid>
+    <description><![CDATA[Kioptrix Level 2 Instalación Por defecto la maquina tiene configurada la tarjeta de red en modo Bridged y no es recomendable por lo que debemos de configurarla en modo NAT que tiene que ser la misma interfaz que nuestro Kali.
+Para ello antes de abrir la maquina en nuestro VMware nos dirigimos al archivo de configuración.
+lo abrimos con nuestro editor de texto y cambiamos el nombre de la red por NAT]]></description>
+</item>
+<item>
+    <title>Kioptrix Level 1 Walkthrough</title>
+    <link>http://localhost:1313/kioptrix_level_1/</link>
+    <pubDate>Mon, 14 Aug 2023 11:24:09 &#43;0200</pubDate>
+    <author>Antu</author>
+    <guid>http://localhost:1313/kioptrix_level_1/</guid>
+    <description><![CDATA[Kioptrix: Level 1 Instalación Si iniciamos la maquina por defecto la tarjeta de red esta en modo brigded y esto no es para nada recomendable por lo que debemos cambiarlo a modo NAT para ello debemos ir al archivo de configuración ubicado en la carpeta de la maquina
+Buscamos Donde ponga Brigded y lo cambiamos por NAT
+#cambiar ethernet0.networkName = &#34;Bridged&#34; #por ethernet0.networkName = &#34;NAT&#34; Después configuramos nuestra tarjeta de red como NAT e iniciamos.]]></description>
+</item>
+</channel>
+</rss>

