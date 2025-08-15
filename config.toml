@@ -1,8 +1,8 @@
-baseURL = "https://Antu97-6.github.io"
+baseURL = "https://AnTu97-6.github.io"
 
 # theme
 # 主题
-theme = ""
+theme = "AnTu97-6"
 # themes directory
 # 主题目录
 themesDir = "../.."
