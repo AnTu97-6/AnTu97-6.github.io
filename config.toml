@@ -1,15 +1,15 @@
-baseURL = ""
+baseURL = "https://Antu97-6-github.io"
 
 # theme
 # 主题
 theme = ""
 # themes directory
 # 主题目录
-themesDir = ""
+themesDir = "../.."
 
 # website title
 # 网站标题
-title = "AnTu97-6.io"
+title = "AnTu97-6"
 
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
