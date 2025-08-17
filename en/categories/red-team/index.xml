@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Red Team - Category - AnTu97-6</title>
-        <link>http://localhost:1313/en/categories/red-team/</link>
+        <link>https://AnTu97-6.github.io/en/categories/red-team/</link>
         <description>Red Team - Category - AnTu97-6</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/en/categories/red-team/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</lastBuildDate><atom:link href="https://AnTu97-6.github.io/en/categories/red-team/" rel="self" type="application/rss+xml" /><item>
     <title>Método de ejecución Agente C2</title>
-    <link>http://localhost:1313/en/agentec2/</link>
+    <link>https://AnTu97-6.github.io/en/agentec2/</link>
     <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/agentec2/</guid>
+    <guid>https://AnTu97-6.github.io/en/agentec2/</guid>
     <description><![CDATA[Execution method Agent C2 Introduction In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus. For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process.]]></description>
 </item>
 </channel>

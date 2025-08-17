@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>PG - Etiqueta - AnTu97-6</title>
-        <link>http://localhost:1313/tags/pg/</link>
+        <link>https://AnTu97-6.github.io/tags/pg/</link>
         <description>PG - Etiqueta - AnTu97-6</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 May 2024 11:24:09 &#43;0200</lastBuildDate><atom:link href="http://localhost:1313/tags/pg/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 May 2024 11:24:09 &#43;0200</lastBuildDate><atom:link href="https://AnTu97-6.github.io/tags/pg/" rel="self" type="application/rss+xml" /><item>
     <title>Crane</title>
-    <link>http://localhost:1313/crane/</link>
+    <link>https://AnTu97-6.github.io/crane/</link>
     <pubDate>Thu, 02 May 2024 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/crane/</guid>
+    <guid>https://AnTu97-6.github.io/crane/</guid>
     <description><![CDATA[Descripción Dificultad: intermedia (valorada como easy)
 En esta maquina de Proving Grounds Practice, veremos la explotación del software SuiteCRM a través de un exploit publico y una escalada de privilegios aprovechándonos de permisos sobre un binario que es posible ejecutar con sudo.
 Escaneo y Análisis de Vulnerabilidades Iniciamos realizando un escaneo con nmap sobre la maquina crane

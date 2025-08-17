@@ -1,34 +1,34 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>AnTu97-6</title>
-        <link>http://localhost:1313/en/</link>
+        <link>https://AnTu97-6.github.io/en/</link>
         <description>Blog de AnTu97-6</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</lastBuildDate>
-            <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://AnTu97-6.github.io/en/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Método de ejecución Agente C2</title>
-    <link>http://localhost:1313/en/agentec2/</link>
+    <link>https://AnTu97-6.github.io/en/agentec2/</link>
     <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/agentec2/</guid>
+    <guid>https://AnTu97-6.github.io/en/agentec2/</guid>
     <description><![CDATA[Execution method Agent C2 Introduction In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus. For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process.]]></description>
 </item>
 <item>
     <title>Sauna Walkthrough</title>
-    <link>http://localhost:1313/en/sauna/</link>
+    <link>https://AnTu97-6.github.io/en/sauna/</link>
     <pubDate>Wed, 08 Nov 2023 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/sauna/</guid>
+    <guid>https://AnTu97-6.github.io/en/sauna/</guid>
     <description><![CDATA[Sauna Scanning and enumeration Once connected to the VPN and the hackthebox machine started the scanning and enumeration phase by launching the nmap tool by performing a port scan to get services and versions of open ports.
 We started the machine by launching a port scan with nmap.
 nmap -T4 -p- -A 10.10.10.175 Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-05 13:43 EST Stats: 0:00:01 elapsed; 0 hosts completed (0 up), 1 undergoing Ping Scan Parallel DNS resolution of 1 host.]]></description>
 </item>
 <item>
     <title>DC-9 Walkthrough</title>
-    <link>http://localhost:1313/en/dc-9/</link>
+    <link>https://AnTu97-6.github.io/en/dc-9/</link>
     <pubDate>Sat, 23 Sep 2023 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/dc-9/</guid>
+    <guid>https://AnTu97-6.github.io/en/dc-9/</guid>
     <description><![CDATA[#DC-9
 Machine page: https://www.vulnhub.com/entry/dc-9,412/
 Download link: https://download.vulnhub.com/dc/DC-9.zip
@@ -37,40 +37,40 @@ Network Scan The first step is to find the IP of our target, for this we use Arp
 </item>
 <item>
     <title>Kioptrix Level 5 Walkthrough</title>
-    <link>http://localhost:1313/en/kioptrix_level_5/</link>
+    <link>https://AnTu97-6.github.io/en/kioptrix_level_5/</link>
     <pubDate>Sat, 02 Sep 2023 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/kioptrix_level_5/</guid>
+    <guid>https://AnTu97-6.github.io/en/kioptrix_level_5/</guid>
     <description><![CDATA[Kioptrix level 5 Setup For the machine to assign an ip you must remove the network adapter and add it again.
 Resolution Vulnerability scanning and analysis I start by doing a scan of the local network with arp-scan to discover the ip of the target machine.
 arp-scan -I eth0 --localnet -I -&gt; indicate the interface --localnet -&gt; we indicate to generate addresses from the interface configuration. I get that the ip of my target is 192.]]></description>
 </item>
 <item>
     <title>Kioptrix Level 3 Walkthrough</title>
-    <link>http://localhost:1313/en/kioptrix_level_3/</link>
+    <link>https://AnTu97-6.github.io/en/kioptrix_level_3/</link>
     <pubDate>Fri, 25 Aug 2023 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/kioptrix_level_3/</guid>
+    <guid>https://AnTu97-6.github.io/en/kioptrix_level_3/</guid>
     <description><![CDATA[Kioptrix Level 3 Machine Resolution Scanning and Vulnerability Analysis We start with a scan of our local network with the arp command to obtain the ip of our target machine.
 arp-scan -I eth0 --localnet Once the ip is obtained we proceed to perform a scan with nmap.
 nmap -sCV 192.168.66.161 Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-25 13:37 EDT Nmap scan report for kioptrix3.com (192.168.66.161) Host is up (0.0099s latency).]]></description>
 </item>
 <item>
     <title>Kioptrix Level 2 Walkthrough</title>
-    <link>http://localhost:1313/en/kioptrix_level_2/</link>
+    <link>https://AnTu97-6.github.io/en/kioptrix_level_2/</link>
     <pubDate>Tue, 22 Aug 2023 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/kioptrix_level_2/</guid>
+    <guid>https://AnTu97-6.github.io/en/kioptrix_level_2/</guid>
     <description><![CDATA[Kioptrix Level 2 Setup By default the machine has the network card configured in Bridged mode and it is not recommended so we must configure it in NAT mode which has to be the same interface as our Kali.
 To do this before opening the machine in our VMware we go to the configuration file. we open it with our text editor and change the network name to NAT
 #change ethernet0.]]></description>
 </item>
 <item>
     <title>Kioptrix Level 1 Walkthrough</title>
-    <link>http://localhost:1313/en/kioptrix_level_1/</link>
+    <link>https://AnTu97-6.github.io/en/kioptrix_level_1/</link>
     <pubDate>Mon, 14 Aug 2023 11:24:09 &#43;0200</pubDate>
     <author>Antu</author>
-    <guid>http://localhost:1313/en/kioptrix_level_1/</guid>
+    <guid>https://AnTu97-6.github.io/en/kioptrix_level_1/</guid>
     <description><![CDATA[Kioptrix: Level 1 Install if we start the machine by default the network card is in brigded mode and this is not at all recommended so we must change it to NAT mode for this we must go to the configuration file located in the folder of the machine. Look for where it says Brigded and change it to NAT
 #change ethernet0.networkName = &#34;Bridged&#34; #to ethernet0.networkName = &#34;NAT&#34; Then we configure our network card as NAT and start.]]></description>
 </item>

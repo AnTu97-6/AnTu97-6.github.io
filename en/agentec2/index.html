@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Método de ejecución Agente C2 - AnTu97-6</title><meta name="Description" content="Blog de AnTu97-6"><meta property="og:url" content="http://localhost:1313/en/agentec2/">
+        <title>Método de ejecución Agente C2 - AnTu97-6</title><meta name="Description" content="Blog de AnTu97-6"><meta property="og:url" content="https://AnTu97-6.github.io/en/agentec2/">
   <meta property="og:site_name" content="AnTu97-6">
   <meta property="og:title" content="Método de ejecución Agente C2">
   <meta property="og:description" content="Execution method Agent C2 Introduction In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus. For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process.">
@@ -17,17 +17,17 @@
     <meta property="article:tag" content="C2">
     <meta property="article:tag" content="AdaptixC2">
     <meta property="article:tag" content="Acceso Inicial">
-    <meta property="og:image" content="http://localhost:1313/agentec2/preimagen.jpeg">
+    <meta property="og:image" content="https://AnTu97-6.github.io/agentec2/preimagen.jpeg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/agentec2/preimagen.jpeg">
+  <meta name="twitter:image" content="https://AnTu97-6.github.io/agentec2/preimagen.jpeg">
   <meta name="twitter:title" content="Método de ejecución Agente C2">
   <meta name="twitter:description" content="Execution method Agent C2 Introduction In this post I am going to describe a way how an attacker or members of a Red Team can elaborate a malicious file and be executed in the target machine in order to gain access without being detected by the antivirus. For this post I have used the Command and Control AdaptixC2, I will not go into depth on how to install it because in the documentation itself is well detailed the process.">
 <meta name="application-name" content="AnTu97-6">
 <meta name="apple-mobile-web-app-title" content="AnTu97-6">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/en/agentec2/" /><link rel="prev" href="http://localhost:1313/en/sauna/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://AnTu97-6.github.io/en/agentec2/" /><link rel="prev" href="https://AnTu97-6.github.io/en/sauna/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -37,16 +37,16 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/en\/agentec2\/"
+            "@id": "https:\/\/AnTu97-6.github.io\/en\/agentec2\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/agentec2\/preimagen.jpeg",
+                            "url": "https:\/\/AnTu97-6.github.io\/agentec2\/preimagen.jpeg",
                             "width":  1024 ,
                             "height":  1024 
                         }],"genre": "posts","keywords": "Red Team, C2, AdaptixC2, Acceso Inicial","wordcount":  692 ,
-        "url": "http:\/\/localhost:1313\/en\/agentec2\/","datePublished": "2025-06-06T00:00:00+00:00","dateModified": "2025-06-06T17:26:34+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/AnTu97-6.github.io\/en\/agentec2\/","datePublished": "2025-06-06T00:00:00+00:00","dateModified": "2025-06-06T17:26:34+02:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
-            "name": "Antu","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
+            "name": "Antu","logo": "https:\/\/AnTu97-6.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
                 "name": "Antu"
             },"description": ""
@@ -285,7 +285,7 @@ First I add the files to a folder.</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/en/agentec2/" data-title="Método de ejecución Agente C2" data-hashtags="Red Team,C2,AdaptixC2,Acceso Inicial"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/en/agentec2/" data-title="Método de ejecución Agente C2"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/en/agentec2/" data-hashtag="Red Team"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="http://localhost:1313/en/agentec2/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/en/agentec2/" data-title="Método de ejecución Agente C2" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fen%2fagentec2%2f&amp;text=M%c3%a9todo%20de%20ejecuci%c3%b3n%20Agente%20C2" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://AnTu97-6.github.io/en/agentec2/" data-title="Método de ejecución Agente C2" data-hashtags="Red Team,C2,AdaptixC2,Acceso Inicial"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://AnTu97-6.github.io/en/agentec2/" data-title="Método de ejecución Agente C2"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://AnTu97-6.github.io/en/agentec2/" data-hashtag="Red Team"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://AnTu97-6.github.io/en/agentec2/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://AnTu97-6.github.io/en/agentec2/" data-title="Método de ejecución Agente C2" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fAnTu97-6.github.io%2fen%2fagentec2%2f&amp;text=M%c3%a9todo%20de%20ejecuci%c3%b3n%20Agente%20C2" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>

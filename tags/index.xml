@@ -1,86 +1,86 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Etiqueta - AnTu97-6</title>
-        <link>http://localhost:1313/tags/</link>
+        <link>https://AnTu97-6.github.io/tags/</link>
         <description>Tags - Etiqueta - AnTu97-6</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://AnTu97-6.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Acceso Inicial</title>
-    <link>http://localhost:1313/tags/acceso-inicial/</link>
+    <link>https://AnTu97-6.github.io/tags/acceso-inicial/</link>
     <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/acceso-inicial/</guid>
+    <guid>https://AnTu97-6.github.io/tags/acceso-inicial/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>AdaptixC2</title>
-    <link>http://localhost:1313/tags/adaptixc2/</link>
+    <link>https://AnTu97-6.github.io/tags/adaptixc2/</link>
     <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/adaptixc2/</guid>
+    <guid>https://AnTu97-6.github.io/tags/adaptixc2/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>C2</title>
-    <link>http://localhost:1313/tags/c2/</link>
+    <link>https://AnTu97-6.github.io/tags/c2/</link>
     <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/c2/</guid>
+    <guid>https://AnTu97-6.github.io/tags/c2/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Red Team</title>
-    <link>http://localhost:1313/tags/red-team/</link>
+    <link>https://AnTu97-6.github.io/tags/red-team/</link>
     <pubDate>Fri, 06 Jun 2025 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/red-team/</guid>
+    <guid>https://AnTu97-6.github.io/tags/red-team/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>BSCP</title>
-    <link>http://localhost:1313/tags/bscp/</link>
+    <link>https://AnTu97-6.github.io/tags/bscp/</link>
     <pubDate>Fri, 27 Dec 2024 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/bscp/</guid>
+    <guid>https://AnTu97-6.github.io/tags/bscp/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>CSRF</title>
-    <link>http://localhost:1313/tags/csrf/</link>
+    <link>https://AnTu97-6.github.io/tags/csrf/</link>
     <pubDate>Fri, 27 Dec 2024 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/csrf/</guid>
+    <guid>https://AnTu97-6.github.io/tags/csrf/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>WEB</title>
-    <link>http://localhost:1313/tags/web/</link>
+    <link>https://AnTu97-6.github.io/tags/web/</link>
     <pubDate>Fri, 27 Dec 2024 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/web/</guid>
+    <guid>https://AnTu97-6.github.io/tags/web/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Easy</title>
-    <link>http://localhost:1313/tags/easy/</link>
+    <link>https://AnTu97-6.github.io/tags/easy/</link>
     <pubDate>Thu, 02 May 2024 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/easy/</guid>
+    <guid>https://AnTu97-6.github.io/tags/easy/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Intermediate</title>
-    <link>http://localhost:1313/tags/intermediate/</link>
+    <link>https://AnTu97-6.github.io/tags/intermediate/</link>
     <pubDate>Thu, 02 May 2024 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/intermediate/</guid>
+    <guid>https://AnTu97-6.github.io/tags/intermediate/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>OSCP</title>
-    <link>http://localhost:1313/tags/oscp/</link>
+    <link>https://AnTu97-6.github.io/tags/oscp/</link>
     <pubDate>Thu, 02 May 2024 11:24:09 &#43;0200</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/tags/oscp/</guid>
+    <guid>https://AnTu97-6.github.io/tags/oscp/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
